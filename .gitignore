@@ -16,3 +16,4 @@ sitemap.xml.gz
 readme.html
 license.txt
 *.un~
+.svn
