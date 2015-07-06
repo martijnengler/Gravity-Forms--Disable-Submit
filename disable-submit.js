@@ -4,7 +4,6 @@ jQuery(function($){
 		b.attr("disabled", true);
 		b.css("background", "darkgray");
 		b.css("color", "black");
-		b.css("width", b.width() + "px");
 		b.val("Verwerken…");
 	});
 });
