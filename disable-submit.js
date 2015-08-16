@@ -4,6 +4,6 @@ jQuery(function($){
 		b.attr("disabled", true);
 		b.css("background", "darkgray");
 		b.css("color", "black");
-		b.val("Verwerken…");
+		b.val(disable_submit.processing_text);
 	});
 });
