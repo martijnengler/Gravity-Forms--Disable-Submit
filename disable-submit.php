@@ -18,7 +18,7 @@ add_action("wp_enqueue_scripts", function(){
 	// Localize the script with new data
 	;
 	wp_localize_script('ac-gf-disable-submit', 'disable_submit', array(
-		'processing_text' => __( 'Processing…' ),
+		'processing_text' => apply_filters('ac_gf_disable_submit_processing_text', __( 'Processing…' )),
 	));
 
 	wp_enqueue_script("ac-gf-disable-submit");
