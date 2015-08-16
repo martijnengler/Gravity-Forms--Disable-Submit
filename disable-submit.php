@@ -6,19 +6,20 @@ Version: 1.0
 Author: Martijn Engler
 Author URI: http://applecoach.nl/
 */
-wp_register_script(
-	"ac-gf-disable-submit"
-	,	plugins_url('disable-submit.js', __FILE__)
-	, "jquery"
-  , "0.2"
-  , true
-);
+add_action("wp_enqueue_scripts", function(){
+	wp_register_script(
+		"ac-gf-disable-submit"
+		,	plugins_url('disable-submit.js', __FILE__)
+		, "jquery"
+		, "0.2"
+		, true
+	);
 
-// Localize the script with new data
-;
-wp_localize_script('ac-gf-disable-submit', 'disable_submit', array(
+	// Localize the script with new data
+	;
+	wp_localize_script('ac-gf-disable-submit', 'disable_submit', array(
 		'processing_text' => __( 'Processing…' ),
-	)
-);
+	));
 
-wp_enqueue_script("ac-gf-disable-submit");
+	wp_enqueue_script("ac-gf-disable-submit");
+});
